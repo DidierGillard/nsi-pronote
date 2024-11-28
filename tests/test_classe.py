@@ -42,3 +42,7 @@ def test_moyennes_classe_utilise_notes_moyenne(mocker, classe, matieres):
     spy.assert_any_call(classe[1], matieres)
     spy.assert_any_call(classe[2], matieres)
     spy.assert_any_call(classe[3], matieres)
+
+
+def test_moyennes_matieres(classe, matieres):
+    assert Classe.moyennes_matieres(classe, matieres) == [16.5, 6.125, 4, 4, None]
