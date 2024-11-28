@@ -1,0 +1,155 @@
+{
+  "classe": [
+    {
+      "id": 1,
+      "nom": "Élève 1",
+      "notes": [
+        {
+          "idMatiere": 1,
+          "valeur": 18
+        },
+        {
+          "idMatiere": 1,
+          "valeur": null
+        },
+        {
+          "idMatiere": 2,
+          "valeur": 13,
+          "coef": 1
+        },
+        {
+          "idMatiere": 2,
+          "valeur": 17
+        },
+        {
+          "idMatiere": 2,
+          "valeur": 10,
+          "coef": 4
+        },
+        {
+          "idMatiere": 2,
+          "valeur": null,
+          "coef": 2
+        },
+        {
+          "idMatiere": 2,
+          "valeur": 14,
+          "coef": 2
+        },
+        {
+          "idMatiere": 3,
+          "valeur": null
+        },
+        {
+          "idMatiere": 3,
+          "valeur": 0
+        },
+        {
+          "idMatiere": 4,
+          "valeur": null
+        },
+        {
+          "idMatiere": 4,
+          "valeur": null
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "nom": "Élève 2",
+      "notes": [
+        {
+          "idMatiere": 1,
+          "valeur": null
+        },
+        {
+          "idMatiere": 2,
+          "valeur": 0
+        },
+        {
+          "idMatiere": 4,
+          "valeur": 0
+        },
+        {
+          "idMatiere": 4,
+          "valeur": null
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "nom": "Élève 3",
+      "notes": [
+        {
+          "idMatiere": 1,
+          "valeur": 15
+        },
+        {
+          "idMatiere": 2,
+          "valeur": null
+        },
+        {
+          "idMatiere": 2,
+          "valeur": null
+        },
+        {
+          "idMatiere": 3,
+          "valeur": 16
+        },
+        {
+          "idMatiere": 3,
+          "valeur": 0
+        },
+        {
+          "idMatiere": 4,
+          "valeur": null
+        },
+        {
+          "idMatiere": 4,
+          "valeur": 8
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "nom": "Élève 4",
+      "notes": [
+        {
+          "idMatiere": 2,
+          "valeur": null
+        },
+        {
+          "idMatiere": 4,
+          "valeur": null
+        }
+      ]
+    }
+  ],
+  "matieres": [
+    {
+      "id": 1,
+      "nom": "Matière 1",
+      "coef": 2
+    },
+    {
+      "id": 2,
+      "nom": "Matière 2",
+      "coef": 4
+    },
+    {
+      "id": 3,
+      "nom": "Matière 3",
+      "coef": 4
+    },
+    {
+      "id": 4,
+      "nom": "Matière 4",
+      "coef": 2
+    },
+    {
+      "id": 5,
+      "nom": "Matière 5",
+      "coef": 1
+    }
+  ]
+}
