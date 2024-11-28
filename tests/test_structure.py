@@ -3,9 +3,10 @@ from src.Matiere import Matiere
 from src.Eleve import Eleve
 
 def test_class_Note():
-    note = Note(matiere=2, valeur=12.5)
+    note = Note(matiere=2, valeur=12.5, coef=5)
     assert note.matiere == 2
     assert note.valeur == 12.5
+    assert note.coef == 5
 
 def test_class_Matiere():
     mat = Matiere(identifiant=2, nom="histoire", coef=3)
