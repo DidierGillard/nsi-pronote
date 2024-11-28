@@ -12,6 +12,7 @@ pytest = "^8.3.3"
 requests = "^2.32.3"
 pytest-mock = "^3.14.0"
 json-server-py = "^0.1.11"
+mutmut = "^3.2.2"
 
 [build-system]
 requires = ["poetry-core"]
