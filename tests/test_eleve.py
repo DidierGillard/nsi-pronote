@@ -78,8 +78,14 @@ class TestMoyenneGenerale:
     def test_moyenne_sans_note_est_None(self, eleve_sans_note, matieres):
         assert eleve_sans_note.moyenne_generale(matieres) is None
 
-    def test_moyenne_correcte_mock(self, mocker, eleve, matieres):
+    def test_moyenne_correcte_mock_sommes(self, mocker, eleve, matieres):
         mocker.patch("src.Eleve.Eleve.somme_ponderee_moyennes", return_value=10)
         mocker.patch("src.Eleve.Eleve.somme_ponderations_matieres", return_value=5)
 
         assert eleve.moyenne_generale(matieres) == 10 / 5
+
+    def test_moyenne_correcte_mock_moyenne(self, mocker, eleve, matieres):
+        mock = mocker.patch("src.Eleve.Eleve.moyenne_matiere")
+        mock.side_effect = [8, 5, 0]
+
+        assert eleve.moyenne_generale(matieres) == 6
