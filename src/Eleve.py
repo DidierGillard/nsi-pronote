@@ -9,3 +9,8 @@ class Eleve:
         self.id = identifiant
         self.nom = nom
         self.notes = [*notes]
+
+    """ :return la liste des valeurs non nulles, des notes de la matière passée en paramètre ou un tableau vide si aucune note pour cette matière """
+
+    def liste_notes_matiere(self, matiere: int) -> List[float]:
+        pass
