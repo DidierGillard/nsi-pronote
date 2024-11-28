@@ -13,4 +13,8 @@ class Eleve:
     """ :return la liste des valeurs non nulles, des notes de la matière passée en paramètre ou un tableau vide si aucune note pour cette matière """
 
     def liste_notes_matiere(self, matiere: int) -> List[float]:
-        pass
+        return [
+            note.valeur
+            for note in self.notes
+            if note.matiere == matiere and note.valeur is not None
+        ]
