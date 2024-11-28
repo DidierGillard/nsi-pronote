@@ -30,5 +30,7 @@ class Eleve:
     def moyenne_matiere(self, matiere: int) -> float:
         notes = self.liste_notes_matiere(matiere)
         nb_notes = len(self.liste_notes_matiere(matiere))
+        if nb_notes == 0:
+            raise ValueError
 
         return sum(notes) / nb_notes
