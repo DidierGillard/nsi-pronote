@@ -11,11 +11,11 @@ class Eleve:
         self.nom = nom
         self.notes = [*notes]
 
-    """ :return la liste des valeurs non nulles, des notes de la matière passée en paramètre ou un tableau vide si aucune note pour cette matière """
+    """ :return la liste des notes non nulles de la matière passée en paramètre ou un tableau vide si aucune note pour cette matière """
 
-    def liste_notes_matiere(self, matiere: int) -> List[float]:
+    def liste_notes_matiere(self, matiere: int) -> List[Note]:
         return [
-            note.valeur
+            note
             for note in self.notes
             if note.matiere == matiere and note.valeur is not None
         ]
@@ -30,11 +30,12 @@ class Eleve:
 
     def moyenne_matiere(self, matiere: int) -> float:
         notes = self.liste_notes_matiere(matiere)
-        nb_notes = len(self.liste_notes_matiere(matiere))
+        nb_notes = sum([note.coef for note in notes])
+        somme_ponderee = sum([note.coef * note.valeur for note in notes])
         if nb_notes == 0:
             raise ValueError
 
-        return sum(notes) / nb_notes
+        return somme_ponderee / nb_notes
 
     """ :return la somme pondérée des moyennes des matieres de l'éléve. None si l'éléve n'a aucune note """
     def somme_ponderee_moyennes(self, matieres: List[Matiere]) -> float|None:

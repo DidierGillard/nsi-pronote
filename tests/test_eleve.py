@@ -32,7 +32,11 @@ def matieres():
 
 class TestListeNotesMatieres:
     def test_liste_correct(self, eleve):
-        assert eleve.liste_notes_matiere(1) == [18, 6, 0], "liste seulement les notes non null de la matière"
+        assert eleve.liste_notes_matiere(1) == [
+            Note(1, 18),
+            Note(1, 6),
+            Note(1, 0)
+        ], "liste seulement les notes non null de la matière"
 
     def test_liste_vide(self, eleve):
         assert eleve.liste_notes_matiere(3) == []
