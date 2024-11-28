@@ -8,9 +8,9 @@ from src.Matiere import Matiere
 @pytest.fixture
 def eleve():
     return Eleve(1, "Eleve1", [
-        Note(1, 18),
-        Note(1, None),
-        Note(2, 0),
+        Note(1, 18, 2),
+        Note(1, None, 2),
+        Note(2, 0, 2),
         Note(1, 6),
         Note(1, 0)
     ])
@@ -52,7 +52,7 @@ class TestANoteDansMatiere:
 
 class TestMoyenneMatiere:
     def test_moyenne_correct(self, eleve):
-        assert eleve.moyenne_matiere(1) == 8.0
+        assert eleve.moyenne_matiere(1) == 10.5
 
     def test_moyenne_sans_note_raise_ValueError(self, eleve):
         with pytest.raises(ValueError):
@@ -61,7 +61,7 @@ class TestMoyenneMatiere:
 
 class TestSommePondereeMoyennes:
     def test_somme_correcte(self, eleve, matieres):
-        assert eleve.somme_ponderee_moyennes(matieres) == 16
+        assert eleve.somme_ponderee_moyennes(matieres) == 21
 
     def test_sans_note_est_None(self, eleve_sans_note, matieres):
         assert eleve_sans_note.somme_ponderee_moyennes(matieres) is None
@@ -77,7 +77,7 @@ class TestSommePonderationsMatieres:
 
 class TestMoyenneGenerale:
     def test_moyenne_correcte(self, eleve, matieres):
-        assert eleve.moyenne_generale(matieres) == 16 / 6
+        assert eleve.moyenne_generale(matieres) == 21 / 6
 
     def test_moyenne_sans_note_est_None(self, eleve_sans_note, matieres):
         assert eleve_sans_note.moyenne_generale(matieres) is None
