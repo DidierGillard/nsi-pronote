@@ -1,0 +1,34 @@
+@startuml Pronote
+
+class Eleve {
+  + id: number
+  + nom: string
+  + notes: [Note]
+
+  + liste_notes_matiere(matiere)
+  + a_note_dans_matiere(matiere)
+  + moyenne_matiere(matiere)
+  + somme_ponderee_moyennes(matieres)
+  + somme_ponderations_matieres(matieres)
+  + moyenne_generale(matieres)
+}
+class Matiere {
+  + id: number
+  + nom: string
+  + coef: number
+
+  + moyenne(classe)
+}
+
+class Note {
+  + matiere: number
+  + valeur: number <<None>>
+}
+
+class Classe {
+  {static} + moyennes_generales(classe, matieres)
+  {static} + moyennes_matieres(classe, matieres)
+}
+
+Eleve "0..* " -- Note
+@enduml
